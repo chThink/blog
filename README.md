@@ -1,58 +1,57 @@
-📦 Nome do Projeto: Test Smarter
-Este projeto é uma aplicação Angular 18 com renderização do lado do servidor (SSR) utilizando Express.​
+### 📦 Nome do Projeto: Test Smarter
 
-🧰 Pré-requisitos
-Antes de começar, certifique-se de ter instalado:
+## Este projeto é uma aplicação Angular 18 com renderização do lado do servidor (SSR) utilizando Express.​
 
-Node.js: Versão 18.19.1 ou superior.​
+### 🧰 Pré-requisitos
 
-npm: O gerenciador de pacotes do Node.js.​
+## Antes de começar, certifique-se de ter instalado:
 
-Angular CLI: Ferramenta de linha de comando para Angular.​
+# Node.js: Versão 18.19.1 ou superior.​
 
-Editor de código: Recomenda-se o Visual Studio Code.​
-LambdaTest
+# npm: O gerenciador de pacotes do Node.js.​
 
-🚀 Instalação
-Clone o repositório:
+# Angular CLI: Ferramenta de linha de comando para Angular.​
 
-bash
+# Editor de código: Recomenda-se o Visual Studio Code.​
+
+### 🚀 Instalação
+
+## Clone o repositório:
+
+```bash
 Copiar
 git clone https://github.com/seu-usuario/test-smarter.git
 cd test-smarter
-Instale as dependências:
+```
 
-bash
+## Instale as dependências:
+
+```bash
 Copiar
 npm install
-🧪 Scripts Disponíveis
+```
+
+### 🧪 Scripts Disponíveis
+
 Iniciar o servidor de desenvolvimento:
 
-bash
+```bash
 Copiar
 npm start
-A aplicação estará disponível em: http://localhost:4200​
+```
 
-Construir a aplicação para produção:
+# A aplicação estará disponível em: http://localhost:4200​
 
-bash
+## Construir a aplicação para produção:
+
+```bash
 Copiar
 npm run build
-Executar testes unitários:
+```
 
-bash
-Copiar
-npm test
-Executar o servidor SSR em ambiente de desenvolvimento:
+### 🗂️ Estrutura do Projeto
 
-bash
-Copiar
-npm run serve:ssr:test-smarter
-A aplicação SSR estará disponível em: http://localhost:4200​
-
-🗂️ Estrutura do Projeto
-
-bash
+```bash
 src/
 ├── app/
 │ ├── components/
@@ -85,8 +84,12 @@ src/
 angular.json
 package.json
 README.md
-🌐 Ambiente
-Este projeto utiliza o Angular 18 com SSR. O servidor Express é configurado para servir a aplicação renderizada do lado do servidor.​
+```
 
-📄 Licença
-Este projeto está licenciado sob a MIT License.
+### 🌐 Ambiente
+
+# Este projeto utiliza o Angular 18 com SSR. O servidor Express é configurado para servir a aplicação renderizada do lado do servidor.​
+
+### 📄 Licença
+
+# Este projeto está licenciado sob a MIT License.
