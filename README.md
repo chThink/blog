@@ -1,22 +1,22 @@
-### 📦 Nome do Projeto: Test Smarter
+# 📦 Nome do Projeto: Blog/hi-gabrielly
 
-## Este projeto é uma aplicação Angular 18 com renderização do lado do servidor (SSR) utilizando Express.​
+Este projeto é uma aplicação Angular 18 com renderização do lado do servidor (SSR) utilizando Express.​
 
-### 🧰 Pré-requisitos
+## 🧰 Pré-requisitos
 
-## Antes de começar, certifique-se de ter instalado:
+### Antes de começar, certifique-se de ter instalado:
 
-# Node.js: Versão 18.19.1 ou superior.​
+Node.js: Versão 18.19.1 ou superior.​
 
-# npm: O gerenciador de pacotes do Node.js.​
+npm: O gerenciador de pacotes do Node.js.​
 
-# Angular CLI: Ferramenta de linha de comando para Angular.​
+Angular CLI: Ferramenta de linha de comando para Angular.​
 
-# Editor de código: Recomenda-se o Visual Studio Code.​
+Editor de código: Recomenda-se o Visual Studio Code.​
 
-### 🚀 Instalação
+## 🚀 Instalação
 
-## Clone o repositório:
+### Clone o repositório:
 
 ```bash
 Copiar
@@ -24,14 +24,14 @@ git clone https://github.com/seu-usuario/test-smarter.git
 cd test-smarter
 ```
 
-## Instale as dependências:
+### Instale as dependências:
 
 ```bash
 Copiar
 npm install
 ```
 
-### 🧪 Scripts Disponíveis
+## 🧪 Scripts Disponíveis
 
 Iniciar o servidor de desenvolvimento:
 
@@ -40,16 +40,16 @@ Copiar
 npm start
 ```
 
-# A aplicação estará disponível em: http://localhost:4200​
+A aplicação estará disponível em: http://localhost:4200​
 
-## Construir a aplicação para produção:
+### Construir a aplicação para produção:
 
 ```bash
 Copiar
 npm run build
 ```
 
-### 🗂️ Estrutura do Projeto
+## 🗂️ Estrutura do Projeto
 
 ```bash
 src/
@@ -86,10 +86,10 @@ package.json
 README.md
 ```
 
-### 🌐 Ambiente
+## 🌐 Ambiente
 
-# Este projeto utiliza o Angular 18 com SSR. O servidor Express é configurado para servir a aplicação renderizada do lado do servidor.​
+Este projeto utiliza o Angular 18 com SSR. O servidor Express é configurado para servir a aplicação renderizada do lado do servidor.​
 
-### 📄 Licença
+## 📄 Licença
 
-# Este projeto está licenciado sob a MIT License.
+Este projeto está licenciado sob a MIT License.
