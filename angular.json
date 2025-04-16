@@ -17,7 +17,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/test-smarter",
+            "outputPath": "dist/test-smarter/browser",
+            "baseHref": "/hi-gabrielly/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
