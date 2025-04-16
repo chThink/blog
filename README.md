@@ -1,27 +1,92 @@
-# TestSmarter
+📦 Nome do Projeto: Test Smarter
+Este projeto é uma aplicação Angular 18 com renderização do lado do servidor (SSR) utilizando Express.​
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+🧰 Pré-requisitos
+Antes de começar, certifique-se de ter instalado:
 
-## Development server
+Node.js: Versão 18.19.1 ou superior.​
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+npm: O gerenciador de pacotes do Node.js.​
 
-## Code scaffolding
+Angular CLI: Ferramenta de linha de comando para Angular.​
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Editor de código: Recomenda-se o Visual Studio Code.​
+LambdaTest
 
-## Build
+🚀 Instalação
+Clone o repositório:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+bash
+Copiar
+git clone https://github.com/seu-usuario/test-smarter.git
+cd test-smarter
+Instale as dependências:
 
-## Running unit tests
+bash
+Copiar
+npm install
+🧪 Scripts Disponíveis
+Iniciar o servidor de desenvolvimento:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+bash
+Copiar
+npm start
+A aplicação estará disponível em: http://localhost:4200​
 
-## Running end-to-end tests
+Construir a aplicação para produção:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+bash
+Copiar
+npm run build
+Executar testes unitários:
 
-## Further help
+bash
+Copiar
+npm test
+Executar o servidor SSR em ambiente de desenvolvimento:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+bash
+Copiar
+npm run serve:ssr:test-smarter
+A aplicação SSR estará disponível em: http://localhost:4200​
+
+🗂️ Estrutura do Projeto
+
+bash
+src/
+├── app/
+│ ├── components/
+│ │ ├── button/
+│ │ ├── chip/
+│ │ ├── header/
+│ │ ├── input-search/
+│ │ └── post-card/
+│ ├── pages/
+│ │ ├── blog-author-profile/
+│ │ ├── blog-explorer/
+│ │ └── blog-post/
+│ ├── services/
+│ │ ├── header/
+│ │ ├── footer/
+│ │ └── sidebar/
+│ ├── models/
+│ │ ├── header/
+│ │ ├── footer/
+│ │ └── sidebar/
+│ ├── app.module.ts
+│ └── app.server.module.ts
+├── assets/
+├── environments/
+├── index.html
+├── main.ts
+├── main.server.ts
+├── polyfills.ts
+└── styles.css
+angular.json
+package.json
+README.md
+🌐 Ambiente
+Este projeto utiliza o Angular 18 com SSR. O servidor Express é configurado para servir a aplicação renderizada do lado do servidor.​
+
+📄 Licença
+Este projeto está licenciado sob a MIT License.

@@ -1,0 +1,12 @@
+<button
+  *ngIf="imageButton || name"
+  [ngClass]="{
+    'button-icon': imageButton && !name,
+    'button-text': imageButton && name,
+    'button-text-only': !imageButton && name
+  }"
+  (click)="clickButton()"
+>
+  <img *ngIf="imageButton" [src]="imageButton" alt="icon" />
+  <span *ngIf="name">{{ name }}</span>
+</button>

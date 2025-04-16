@@ -1,0 +1,64 @@
+<main>
+  <p class="description">
+    Welcome to our space of care and support. Here, we believe that well-being
+    begins with short breaks, good reflections and sincere conversations. This
+    is a place to take a deep breath, reconnect with yourself and find
+    inspiration for a lighter and more balanced life. Make yourself at home —
+    you are not alone on this journey 💚
+  </p>
+
+  <div class="content">
+    <p class="content-title">Recent blog post</p>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <app-post-card
+          *ngFor="let post of posts | slice : 0 : 5; let i = index"
+          [author]="post.user.name"
+          [authorId]="post.user.id"
+          [title]="post.title"
+          [summary]="post.body"
+          [clickCard]="clickPost"
+          [id]="i"
+        ></app-post-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <p class="content-title">Top voices</p>
+    <div class="content-chips">
+      <app-chip
+        *ngFor="let user of topUser; let i = index"
+        [clickChip]="clickAuthor"
+        [name]="user.name"
+        [id]="user.id"
+        [articles]="postCounts[i].count"
+      ></app-chip>
+    </div>
+  </div>
+
+  <div class="content">
+    <p class="content-title">Articles</p>
+    <div class="content-cards">
+      <app-post-card
+        *ngFor="let post of posts; let i = index"
+        [author]="post.user.name"
+        [authorId]="post.user.id"
+        [title]="post.title"
+        [summary]="post.body"
+        [clickCard]="clickPost"
+        [id]="i"
+      ></app-post-card>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="pagination">
+      <app-button
+        *ngIf="!allLoaded"
+        name="Load More"
+        [clickButton]="load"
+      ></app-button>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,9 @@
+<input
+  type="text"
+  name="searchArticle"
+  placeholder="Enter article search"
+  [value]="value"
+  (input)="onInputChange($event)"
+  (blur)="onBlur()"
+  (keyup)="onKeyUp($event)"
+/>

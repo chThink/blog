@@ -1,0 +1,35 @@
+<main *ngIf="posts.length > 0" class="content-search">
+  <div class="content">
+    <p class="content-title">Search '{{ searchTerm }}'</p>
+    <div class="content-cards">
+      <app-post-card
+        *ngFor="let post of posts; let i = index"
+        [author]="post.user.name"
+        [authorId]="post.user.id"
+        [title]="post.title"
+        [summary]="post.body"
+        [clickCard]="clickPost"
+        [id]="i"
+      ></app-post-card>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="pagination">
+      <app-button
+        *ngIf="!allLoaded"
+        name="Load More"
+        [clickButton]="load"
+      ></app-button>
+    </div>
+  </div>
+</main>
+
+<main *ngIf="posts.length === 0" class="content-search-not-found">
+  <div class="content">
+    <img src="assets/notfound.png" alt="" />
+    <p class="content-title">Search not found</p>
+    <p class="text">We've searched more than 100 articles</p>
+    <p class="text">We did not found any article for your search</p>
+  </div>
+</main>

@@ -1,0 +1,26 @@
+<div class="card" (click)="clickCard(id)">
+  <div class="card-photo" style="">
+    <img [src]="defaultCover" alt="image" />
+  </div>
+  <div class="card-title">
+    <p class="title">
+      {{ title | truncate : 40 }}
+    </p>
+  </div>
+  <div class="card-text">
+    <p class="text">
+      {{ summary | truncate : 60 }}
+    </p>
+  </div>
+  <div class="card-author">
+    <div class="photo-author">
+      <img [src]="defaultProfile" alt="image" />
+    </div>
+    {{ author }}
+    <img
+      src="assets/fi-sr-badge.svg"
+      class="icon"
+      *ngIf="authorId === 1 || authorId === 2 || authorId === 3"
+    />
+  </div>
+</div>

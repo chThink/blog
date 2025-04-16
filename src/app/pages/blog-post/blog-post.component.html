@@ -1,0 +1,135 @@
+<main class="content-post" style="">
+  <div class="post">
+    <div class="post-image">
+      <img [src]="defaultCover" alt="image" />
+    </div>
+
+    <div class="post-title">
+      <p>
+        {{ post.title }}
+      </p>
+    </div>
+
+    <div class="post-text">
+      <p>
+        {{ post.body }}
+      </p>
+    </div>
+
+    <div class="post-comment">
+      <p>Comments</p>
+      <div
+        *ngFor="let comments of post.comments; let i = index"
+        class="info-comment"
+      >
+        <img src="assets/default-avatar.png" alt="" />
+        <div class="info">
+          <p class="author-name">{{ comments.name }}</p>
+          <p class="author-email">Sep, 23, 2023</p>
+          <p class="author-email">
+            {{ comments.body }}
+          </p>
+          <br *ngIf="i < post.comments.length - 1" />
+        </div>
+      </div>
+
+      <form #commentForm="ngForm" (ngSubmit)="sendComment(commentForm)">
+        <p>Leave a reply</p>
+
+        <div class="comment-form">
+          <textarea
+            class="comment"
+            name="comment"
+            [(ngModel)]="commentData.comment"
+            placeholder="Comment"
+            required
+          ></textarea>
+          <div class="input-info-group">
+            <div class="input-name">
+              <input
+                type="text"
+                name="name"
+                [(ngModel)]="commentData.name"
+                placeholder="Name"
+                required
+                #name="ngModel"
+                [class.invalid]="name.invalid && name.touched"
+              />
+              <div *ngIf="name.invalid && name.touched" class="error">
+                <p>Name is required</p>
+              </div>
+            </div>
+            <div class="input-email">
+              <input
+                type="email"
+                name="email"
+                [(ngModel)]="commentData.email"
+                placeholder="Email"
+                required
+                email
+                #email="ngModel"
+                [class.invalid]="email.invalid && email.touched"
+              />
+              <div *ngIf="email.invalid && email.touched" class="error">
+                <div *ngIf="email.errors?.['required']">
+                  <p>Email is required</p>
+                </div>
+                <div *ngIf="email.errors?.['email']">
+                  <p>Invalid format email</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <app-button
+            name="Send reply"
+            type="submit"
+            class="comment-button"
+          ></app-button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="content-lateral">
+    <p class="content-title">Author</p>
+    <div class="info-author">
+      <img src="assets/default-avatar.png" alt="" />
+      <div class="info">
+        <p class="author-name">
+          {{ post.user.name }}
+          <img
+            src="assets/fi-sr-badge.svg"
+            class="icon"
+            *ngIf="
+              post.user.id === 1 || post.user.id === 2 || post.user.id === 3
+            "
+          />
+        </p>
+        <p class="author-email">
+          <img src="assets/fi-br-envelope.svg" class="icon" />
+          {{ post.user.email }}
+        </p>
+        <p class="author-email">
+          <img src="assets/fi-br-document.svg" class="icon" />
+          {{ totalUserPosts }} Articles
+          <a [routerLink]="['/author', post.user.id]">see more</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="recomends">
+      <p class="content-title">Suggestions for you</p>
+      <div class="content-cards">
+        <app-post-card
+          *ngFor="let post of posts | slice : 0 : 3; let i = index"
+          [author]="post.user.name"
+          [authorId]="post.user.id"
+          [title]="post.title"
+          [summary]="post.body"
+          [clickCard]="clickPost"
+          [id]="post.id"
+        ></app-post-card>
+      </div>
+    </div>
+  </div>
+</main>
