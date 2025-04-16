@@ -75,10 +75,10 @@ Objetivo do Projeto: Desenvolver um blog utilizando Angular, com foco em uma int
    - A decisão de usar Angular Services para consumir a API foi tomada para garantir que o código fosse modular e reutilizável, aproveitei também para gerenciar estados globais pelas Services, o que trouxe agilidade para o desenvolvimento.
 
 ### Fase 5: Testes e Validação
-
-    - Foram realizados Teste Exploratório, Teste Funcional Manual, Teste de Aceitação Manual, Teste de Regressão Manual, Teste de Usabilidade Manual e testes de integração para validar os componentes e a interação com a API.
-
-    - Não foi implementado testes unitários nessa primeira versão pois tinha um escopo e um prazo. A ideia é implementar em alguns componentes mais robustos, para garantir bom funcionamento.
+   
+  - Foram realizados Teste Exploratório, Teste Funcional Manual, Teste de Aceitação Manual, Teste de Regressão Manual, Teste de Usabilidade Manual e testes de integração para validar os componentes e a interação com a API.
+  
+  - Não foi implementado testes unitários nessa primeira versão pois tinha um escopo e um prazo. A ideia é implementar em alguns componentes mais robustos, para garantir bom funcionamento.
 
 ### Fase 6: Lançamento e Feedback
 
@@ -117,8 +117,13 @@ Editor de código: Recomenda-se o Visual Studio Code.​
 ### Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/test-smarter.git
-cd test-smarter
+HTTPS
+git clone https://github.com/seu-usuario/blog.git
+cd blog
+
+SSH
+git@github.com:seu-usuario/blog.git
+cd blog
 ```
 
 ### Instale as dependências:
