@@ -19,7 +19,6 @@ Editor de código: Recomenda-se o Visual Studio Code.​
 ### Clone o repositório:
 
 ```bash
-Copiar
 git clone https://github.com/seu-usuario/test-smarter.git
 cd test-smarter
 ```
@@ -27,7 +26,6 @@ cd test-smarter
 ### Instale as dependências:
 
 ```bash
-Copiar
 npm install
 ```
 
@@ -36,7 +34,6 @@ npm install
 Iniciar o servidor de desenvolvimento:
 
 ```bash
-Copiar
 npm start
 ```
 
@@ -45,7 +42,6 @@ A aplicação estará disponível em: http://localhost:4200​
 ### Construir a aplicação para produção:
 
 ```bash
-Copiar
 npm run build
 ```
 
@@ -59,19 +55,26 @@ src/
 │ │ ├── chip/
 │ │ ├── header/
 │ │ ├── input-search/
+│ │ ├── author-profile-info/   //soon
+│ │ ├── author-post-info/   //soon
+│ │ ├── comment-post-item/   //soon
+│ │ ├── comment-post-form/   //soon
+│ │ ├── post-card-full/   //soon
+│ │ ├── exception-page-message/   //soon
 │ │ └── post-card/
 │ ├── pages/
 │ │ ├── blog-author-profile/
 │ │ ├── blog-explorer/
-│ │ └── blog-post/
+│ │ ├── blog-post/
+│ │ └── blog-search-articles/
 │ ├── services/
-│ │ ├── header/
-│ │ ├── footer/
-│ │ └── sidebar/
+│ │ ├── api/
+│ │ ├── posts/
+│ │ └── users/
 │ ├── models/
-│ │ ├── header/
-│ │ ├── footer/
-│ │ └── sidebar/
+│ │ └── user/
+│ ├── utils/
+│ │ └── truncate/
 │ ├── app.module.ts
 │ └── app.server.module.ts
 ├── assets/
