@@ -158,12 +158,12 @@ src/
 │ │ ├── chip/
 │ │ ├── header/
 │ │ ├── input-search/
-│ │ ├── author-profile-info/   //soon
-│ │ ├── author-post-info/   //soon
-│ │ ├── comment-post-item/   //soon
-│ │ ├── comment-post-form/   //soon
-│ │ ├── post-card-full/   //soon
-│ │ ├── exception-page-message/   //soon
+│ │ ├── author-profile-info/
+│ │ ├── author-post-info/
+│ │ ├── comment-post-item/
+│ │ ├── comment-post-form/
+│ │ ├── post-card-full/
+│ │ ├── exception-page-message/
 │ │ └── post-card/
 │ ├── pages/
 │ │ ├── blog-author-profile/

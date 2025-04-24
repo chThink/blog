@@ -6,6 +6,8 @@ import { ButtonComponent } from '../../components/button/button.component';
 import { PostsService } from '../../services/posts/posts.service';
 import { UsersService } from '../../services/users/users.service';
 import { forkJoin, map } from 'rxjs';
+import { AuthorPostInfoComponent } from '../../components/author-post-info/author-post-info/author-post-info.component';
+import { AuthorProfileInfoComponent } from '../../components/author-profile-info/author-profile-info/author-profile-info.component';
 
 interface Post {
   id: number;
@@ -29,7 +31,12 @@ interface Post {
 @Component({
   selector: 'app-blog-author-profile',
   standalone: true,
-  imports: [PostCardComponent, CommonModule, ButtonComponent],
+  imports: [
+    PostCardComponent,
+    CommonModule,
+    ButtonComponent,
+    AuthorProfileInfoComponent,
+  ],
   templateUrl: './blog-author-profile.component.html',
   styleUrl: './blog-author-profile.component.scss',
 })

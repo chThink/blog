@@ -6,11 +6,17 @@ import { ButtonComponent } from '../../components/button/button.component';
 import { forkJoin, map } from 'rxjs';
 import { UsersService } from '../../services/users/users.service';
 import { Router } from '@angular/router';
+import { ExceptionPageMessageComponent } from '../../components/exception-page-message/exception-page-message/exception-page-message.component';
 
 @Component({
   selector: 'app-blog-search-articles',
   standalone: true,
-  imports: [CommonModule, PostCardComponent, ButtonComponent],
+  imports: [
+    CommonModule,
+    PostCardComponent,
+    ButtonComponent,
+    ExceptionPageMessageComponent,
+  ],
   templateUrl: './blog-search-articles.component.html',
   styleUrl: './blog-search-articles.component.scss',
 })

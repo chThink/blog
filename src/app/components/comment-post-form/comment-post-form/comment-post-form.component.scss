@@ -1,0 +1,65 @@
+.comment-form {
+  display: flex;
+  flex-direction: column;
+
+  .comment {
+    height: 60px;
+  }
+  input,
+  textarea {
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    padding: 16px;
+    color: #858484;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+  }
+
+  textarea {
+    margin-bottom: 16px;
+  }
+
+  .input-info-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    .input-name,
+    .input-email {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin: 8px 0 0 8px;
+      }
+
+      .invalid {
+        border: 1px solid red;
+      }
+
+      .error {
+        color: red;
+        font-size: 0.6em;
+      }
+    }
+  }
+
+  .comment-button {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .comment-form {
+    .input-info-group {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+}

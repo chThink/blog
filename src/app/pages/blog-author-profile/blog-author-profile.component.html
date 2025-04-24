@@ -1,34 +1,8 @@
 <main class="content-author">
-  <header class="author-header">
-    <img src="assets/default-avatar.png" alt="" />
-    <div class="info">
-      <p class="author-name">
-        {{ user.name }}
-        <img
-          src="assets/fi-sr-badge.svg"
-          class="icon"
-          *ngIf="user.id === 1 || user.id === 2 || user.id === 3"
-        />
-      </p>
-      <p class="author-location">
-        <img src="assets/fi-br-marker.svg" class="icon" />
-
-        {{ user.address.city }}
-      </p>
-      <p class="author-email">
-        <img src="assets/fi-br-envelope.svg" class="icon" />
-
-        {{ user.email }}
-      </p>
-      <p class="author-email">
-        <img src="assets/fi-br-document.svg" class="icon" />
-        {{ postCounts }} Articles
-      </p>
-      <p class="author-bio">
-        Jexper sakjdonf sjdijaipdjsa fioajfiojfa sfnojaofso
-      </p>
-    </div>
-  </header>
+  <app-author-profile-info
+    [user]="user"
+    [postCounts]="postCounts"
+  ></app-author-profile-info>
 
   <div class="content">
     <p class="content-title">Publications</p>

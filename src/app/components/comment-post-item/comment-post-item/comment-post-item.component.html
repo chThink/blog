@@ -1,0 +1,11 @@
+<div *ngFor="let comment of comments; let i = index" class="info-comment">
+  <img src="assets/default-avatar.png" alt="" />
+  <div class="info">
+    <p class="author-name">{{ comment.name }}</p>
+    <p class="author-email">Sep, 23, 2023</p>
+    <p class="author-email">
+      {{ comment.body }}
+    </p>
+    <br *ngIf="i < comment.length - 1" />
+  </div>
+</div>

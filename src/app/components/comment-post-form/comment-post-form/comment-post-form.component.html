@@ -1,0 +1,52 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <div class="comment-form">
+    <textarea
+      class="comment"
+      name="comment"
+      [(ngModel)]="comment.comment"
+      placeholder="Comment"
+      required
+    ></textarea>
+    <div class="input-info-group">
+      <div class="input-name">
+        <input
+          type="text"
+          name="name"
+          [(ngModel)]="comment.name"
+          placeholder="Name"
+          required
+          #name="ngModel"
+          [class.invalid]="name.invalid && name.touched"
+        />
+        <div *ngIf="name.invalid && name.touched" class="error">
+          <p>Name is required</p>
+        </div>
+      </div>
+      <div class="input-email">
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="comment.email"
+          placeholder="Email"
+          required
+          email
+          #email="ngModel"
+          [class.invalid]="email.invalid && email.touched"
+        />
+        <div *ngIf="email.invalid && email.touched" class="error">
+          <div *ngIf="email.errors?.['required']">
+            <p>Email is required</p>
+          </div>
+          <div *ngIf="email.errors?.['email']">
+            <p>Invalid format email</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-button
+      name="Send reply"
+      type="submit"
+      class="comment-button"
+    ></app-button>
+  </div>
+</form>

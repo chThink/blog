@@ -7,6 +7,10 @@ import { PostsService } from '../../services/posts/posts.service';
 import { forkJoin, Subscription, switchMap } from 'rxjs';
 import { UsersService } from '../../services/users/users.service';
 import { FormsModule, NgForm } from '@angular/forms';
+import { AuthorPostInfoComponent } from '../../components/author-post-info/author-post-info/author-post-info.component';
+import { PostCardFullComponent } from '../../components/post-card-full/post-card-full/post-card-full.component';
+import { CommentPostItemComponent } from '../../components/comment-post-item/comment-post-item/comment-post-item.component';
+import { CommentPostFormComponent } from '../../components/comment-post-form/comment-post-form/comment-post-form.component';
 
 interface Post {
   id: number;
@@ -34,6 +38,10 @@ interface Post {
     RouterLink,
     ButtonComponent,
     FormsModule,
+    AuthorPostInfoComponent,
+    PostCardFullComponent,
+    CommentPostItemComponent,
+    CommentPostFormComponent,
   ],
   templateUrl: './blog-post.component.html',
   styleUrl: './blog-post.component.scss',
@@ -50,12 +58,6 @@ export class BlogPostComponent {
   };
   posts: Post[] = [];
   private routeSub!: Subscription;
-
-  commentData = {
-    comment: '',
-    name: '',
-    email: '',
-  };
 
   totalUserPosts: number = 0;
 
@@ -107,12 +109,14 @@ export class BlogPostComponent {
     }
   }
 
-  sendComment = (form: NgForm) => {
+  sendComment(form: NgForm) {
     if (form.valid) {
+      const { name, email, comment } = form.value;
+
       const newComment = {
-        name: this.commentData.name,
-        email: this.commentData.email,
-        body: this.commentData.comment,
+        name,
+        email,
+        body: comment,
       };
 
       this.post.comments.push(newComment);
@@ -120,7 +124,7 @@ export class BlogPostComponent {
     } else {
       console.log('Invalid Form!');
     }
-  };
+  }
 
   clickPost = (id: number) => {
     this.router.navigate(['/post', id]);

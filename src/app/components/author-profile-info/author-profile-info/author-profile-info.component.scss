@@ -1,0 +1,90 @@
+:host {
+  display: flex;
+  gap: 16px;
+
+  img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .author-name {
+    margin: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .author-location {
+    margin: 8px;
+    font-size: 1rem;
+  }
+
+  .author-email {
+    margin: 8px;
+    color: #858484;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+
+  .author-bio {
+    margin: 8px;
+    color: #858484;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+
+  @media (min-width: 768px) {
+    img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .author-name {
+      margin: 8px;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    .author-location {
+      margin: 8px;
+      font-size: 1.2rem;
+    }
+
+    .author-email {
+      margin: 8px;
+      color: #858484;
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    .author-bio {
+      margin: 8px;
+      color: #858484;
+      font-size: 1rem;
+      font-style: italic;
+    }
+  }
+}

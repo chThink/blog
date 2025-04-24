@@ -1,28 +1,3 @@
-.content-search-not-found {
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    img {
-      width: 280px;
-    }
-
-    .content-title {
-      font-weight: bold;
-      font-size: 1.4rem;
-      text-align: center;
-    }
-
-    .text {
-      margin: 0;
-      color: #858484;
-      font-size: 1.2rem;
-      text-align: center;
-    }
-  }
-}
-
 .content-search {
   .content {
     .content-title {

@@ -1,0 +1,20 @@
+<img src="assets/default-avatar.png" alt="" />
+<div class="info">
+  <p class="author-name">
+    {{ post.user.name }}
+    <img
+      src="assets/fi-sr-badge.svg"
+      class="icon"
+      *ngIf="post.user.id === 1 || post.user.id === 2 || post.user.id === 3"
+    />
+  </p>
+  <p class="author-email">
+    <img src="assets/fi-br-envelope.svg" class="icon" />
+    {{ post.user.email }}
+  </p>
+  <p class="author-email">
+    <img src="assets/fi-br-document.svg" class="icon" />
+    {{ totalUserPosts }} Articles
+    <a [routerLink]="['/author', post.user.id]">see more</a>
+  </p>
+</div>

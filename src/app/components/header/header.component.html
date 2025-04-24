@@ -1,12 +1,10 @@
-<div class="header">
-  <p class="header-title" (click)="goExplorer()">Blog</p>
-  <app-button
-    [clickButton]="toggleInputSearch"
-    imageButton="assets/fi-br-search.svg"
-    *ngIf="!showInputSearch"
-  ></app-button>
-  <app-input-search
-    *ngIf="showInputSearch"
-    [(ngModel)]="searchText"
-  ></app-input-search>
-</div>
+<p class="header-title" (click)="goExplorer()">Blog</p>
+<app-button
+  [clickButton]="toggleInputSearch"
+  imageButton="assets/fi-br-search.svg"
+  *ngIf="!showInputSearch"
+></app-button>
+<app-input-search
+  *ngIf="showInputSearch"
+  [(ngModel)]="searchText"
+></app-input-search>
